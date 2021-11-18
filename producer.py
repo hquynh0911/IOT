@@ -6,7 +6,7 @@ channel = connection.channel()
 
 channel.queue_declare(queue='task_queue', durable=True)
 
-message = {'id': 1, 'name': 'name1'}
+message = {'id': 1, 'name': 'firework'}
 channel.basic_publish(exchange='',
                       routing_key='task_queue',
                       body=json.dumps(message),
